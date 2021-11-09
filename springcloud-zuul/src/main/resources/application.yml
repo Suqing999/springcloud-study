@@ -1,0 +1,18 @@
+server:
+  port: 9527
+
+
+spring:
+  application:
+    name: springcloud-zuul #服务中心注册的名字
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/,http://eureka7001.com:7001/eureka/
+
+zuul:
+  routes:
+    mydept.serviceId: springcloud-provider-dept  #这是原来的
+    mydept.path: /mydept/**   #现在用mydept来进行
+  ignored-services: springcloud-provider-dept #不可以再用这个访问
+  #prefix: /suki

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baidu.springcloud.dao.DeptDao">
+
+    <!--增加一个部门-->
+    <insert id="addDept" parameterType="dept">
+        INSERT INTO dept (dname,db_source) VALUES (#{dname},DATABASE())
+    </insert>
+
+    <!--根据id查-->
+    <select id="queryDeptById" parameterType="long" resultType="dept">
+        select * from dept where deptno=#{id}
+    </select>
+    <!--查询所有-->
+    <select id="queryDept" resultType="dept">
+        select * from dept
+    </select>
+</mapper>
