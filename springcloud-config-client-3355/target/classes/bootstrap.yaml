@@ -1,0 +1,13 @@
+#系统级的配置 （优先级高）
+#application 是用户级别的配置
+#防止与远程冲突
+
+#客户端应该从 3344 服务获取  （客户端连接服务器，服务器去连远程仓库）
+spring:
+  cloud:
+    config:
+      name: config-client   #连接的资源名字不要后缀！！！
+      uri: http://localhost:3344
+      profile: test   #生产环境
+      label: master
+      #以上的可以拼接url

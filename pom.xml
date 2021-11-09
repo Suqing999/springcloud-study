@@ -20,6 +20,8 @@
         <module>provider-dept-hystrix</module>
         <module>consumer-dept-hystrix-dashboard</module>
         <module>springcloud-zuul</module>
+        <module>springcloud-config-server-3344</module>
+        <module>springcloud-config-client-3355</module>
     </modules>
     <!--打包方式(总的)-->
     <packaging>pom</packaging>
