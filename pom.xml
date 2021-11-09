@@ -22,6 +22,8 @@
         <module>springcloud-zuul</module>
         <module>springcloud-config-server-3344</module>
         <module>springcloud-config-client-3355</module>
+        <module>springcloud-config-erurka-7001</module>
+        <module>provider-dept-config</module>
     </modules>
     <!--打包方式(总的)-->
     <packaging>pom</packaging>

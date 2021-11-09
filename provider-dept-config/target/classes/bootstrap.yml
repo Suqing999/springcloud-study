@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: config-dept   #连接的资源名字不要后缀！！！
+      uri: http://localhost:3344
+      profile: dev   #生产环境
+      label: master
